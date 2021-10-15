@@ -58,7 +58,10 @@ downBtn.addEventListener('click', function () {
     }
 
     image.innerHTML = `<img src="${items[c]}">`;
+    titleList.insertAdjacentHTML('beforeend', title[c]);
+    textList.insertAdjacentHTML('afterbegin', text[c]);
 
+    //imageList[c].style.filter = 'grayscale(1)';
 });
 
 topBtn.addEventListener('click', function () {
