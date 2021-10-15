@@ -26,4 +26,4 @@ const text = [
     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
 ]
 
-document.querySelector('ul.image-list').innerHTML = items;
+document.querySelector('img.image-list').innerHTML = items;
