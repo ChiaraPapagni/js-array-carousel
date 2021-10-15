@@ -43,11 +43,10 @@ for (let index = 0; index < items.length; index++) {
     imageList.append(li);
 }
 
-image.insertAdjacentHTML('beforeend', `<img src="${items[0]}">`);
-titleList.insertAdjacentHTML('beforeend', title[0]);
-textList.insertAdjacentHTML('afterbegin', text[0]);
-
-//textList.innerHTML = text[0];
+image.innerHTML = `
+        <h3 class="title-list">${title[0]}</h3>
+        <p class="text-list">${text[0]}</p>
+        <img src="${items[0]}">`;
 
 downBtn.addEventListener('click', function () {
 
@@ -57,11 +56,11 @@ downBtn.addEventListener('click', function () {
         c = 0;
     }
 
-    image.innerHTML = `<img src="${items[c]}">`;
-    titleList.insertAdjacentHTML('beforeend', title[c]);
-    textList.insertAdjacentHTML('afterbegin', text[c]);
+    image.innerHTML = `
+        <h3 class="title-list">${title[c]}</h3>
+        <p class="text-list">${text[c]}</p>
+        <img src="${items[c]}">`;
 
-    //imageList[c].style.filter = 'grayscale(1)';
 });
 
 topBtn.addEventListener('click', function () {
@@ -72,6 +71,9 @@ topBtn.addEventListener('click', function () {
         c = (items.length - 1);
     }
 
-    image.innerHTML = `<img src="${items[c]}">`;
+    image.innerHTML = `
+        <h3 class="title-list">${title[c]}</h3>
+        <p class="text-list">${text[c]}</p>
+        <img src="${items[c]}">`;
 
 });
