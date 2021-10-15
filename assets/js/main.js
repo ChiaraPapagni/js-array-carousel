@@ -44,9 +44,12 @@ for (let index = 0; index < items.length; index++) {
 }
 
 image.innerHTML = `
-        <h3 class="title-list">${title[0]}</h3>
-        <p class="text-list">${text[0]}</p>
+        <div class="desc">
+            <h3 class="title-list">${title[0]}</h3>
+            <p class="text-list">${text[0]}</p>
+        </div>
         <img src="${items[0]}">`;
+
 
 downBtn.addEventListener('click', function () {
 
@@ -57,8 +60,10 @@ downBtn.addEventListener('click', function () {
     }
 
     image.innerHTML = `
-        <h3 class="title-list">${title[c]}</h3>
-        <p class="text-list">${text[c]}</p>
+        <div class="desc">
+            <h3 class="title-list">${title[c]}</h3>
+            <p class="text-list">${text[c]}</p>
+        </div>
         <img src="${items[c]}">`;
 
 });
@@ -72,8 +77,10 @@ topBtn.addEventListener('click', function () {
     }
 
     image.innerHTML = `
-        <h3 class="title-list">${title[c]}</h3>
-        <p class="text-list">${text[c]}</p>
+        <div class="desc">
+            <h3 class="title-list">${title[c]}</h3>
+            <p class="text-list">${text[c]}</p>
+        </div>
         <img src="${items[c]}">`;
 
 });
