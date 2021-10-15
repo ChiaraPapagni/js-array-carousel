@@ -28,8 +28,6 @@ const text = [
 
 //seleziono elementi dalla DOM
 const image = document.querySelector('.image');
-const titleList = document.querySelector('.title-list');
-const textList = document.querySelector('.text-list');
 const imageList = document.querySelector('.image-list');
 const topBtn = document.getElementById('top');
 const downBtn = document.getElementById('down');
@@ -39,7 +37,7 @@ let c = 0;
 for (let index = 0; index < items.length; index++) {
     //creo nuovo elemento li
     const li = document.createElement('li');
-    li.innerHTML = `<img src="${items[index]}">`;
+    li.innerHTML = `<img src="${items[index]}" class="img">`;
     imageList.append(li);
 }
 
@@ -50,6 +48,7 @@ image.innerHTML = `
         </div>
         <img src="${items[0]}">`;
 
+document.getElementsByClassName('img')[0].classList.add('active');
 
 downBtn.addEventListener('click', function () {
 
@@ -66,6 +65,8 @@ downBtn.addEventListener('click', function () {
         </div>
         <img src="${items[c]}">`;
 
+    document.getElementsByClassName('img')[c].classList.add('active');
+    console.log(document.getElementsByClassName('img')[c].classList);
 });
 
 topBtn.addEventListener('click', function () {
