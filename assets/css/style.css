@@ -54,13 +54,14 @@
     width: 170px;
     height: 80px;
     background-position: center;
-    /* filter: brightness(70%); */
+}
+
+.image-list>li>img {
+    filter: brightness(60%);
 }
 
 .active {
     filter: brightness(100%);
-    width: 166px;
-    height: 76px;
     border: 2px solid lightgray;
 }
 
