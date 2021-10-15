@@ -1,10 +1,10 @@
 //lista ordinata di 5 immagini
 const items = [
-    './img/01.jpg',
-    './img/02.jpg',
-    './img/03.jpg',
-    './img/04.jpg',
-    './img/05.jpg'
+    'assets/img/01.jpg',
+    'assets/img/02.jpg',
+    'assets/img/03.jpg',
+    'assets/img/04.jpg',
+    'assets/img/05.jpg'
 ];
 
 
@@ -26,4 +26,4 @@ const text = [
     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
 ]
 
-document.querySelector('img.image-list').innerHTML = items;
+document.querySelector('.image-list').innerHTML = `<img src="${items[0]}">`;
