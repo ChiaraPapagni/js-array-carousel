@@ -53,6 +53,7 @@ document.getElementsByClassName('img')[0].classList.add('active');
 
 downBtn.addEventListener('click', function () {
 
+    document.getElementsByClassName('img')[c].classList.remove('active');
     if (c < (items.length - 1)) {
         c++;
         document.getElementsByClassName('img')[c].classList.add('active');
@@ -67,13 +68,6 @@ downBtn.addEventListener('click', function () {
             <p class="text-list">${text[c]}</p>
         </div>
         <img src="${items[c]}">`;
-
-    if (c > 0) {
-        document.getElementsByClassName('img')[c - 1].classList.remove('active');
-    } else {
-        document.getElementsByClassName('img')[items.length - 1].classList.remove('active');
-    }
-
 
 });
 
