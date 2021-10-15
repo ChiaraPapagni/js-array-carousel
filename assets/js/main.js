@@ -50,12 +50,15 @@ image.innerHTML = `
 
 document.getElementsByClassName('img')[0].classList.add('active');
 
+
 downBtn.addEventListener('click', function () {
 
     if (c < (items.length - 1)) {
         c++;
+        document.getElementsByClassName('img')[c].classList.add('active');
     } else {
         c = 0;
+        document.getElementsByClassName('img')[c].classList.add('active');
     }
 
     image.innerHTML = `
@@ -65,16 +68,25 @@ downBtn.addEventListener('click', function () {
         </div>
         <img src="${items[c]}">`;
 
-    document.getElementsByClassName('img')[c].classList.add('active');
-    console.log(document.getElementsByClassName('img')[c].classList);
+    if (c > 0) {
+        document.getElementsByClassName('img')[c - 1].classList.remove('active');
+    } else {
+        document.getElementsByClassName('img')[items.length - 1].classList.remove('active');
+    }
+
+
 });
+
 
 topBtn.addEventListener('click', function () {
 
+    document.getElementsByClassName('img')[c].classList.remove('active');
     if (c != 0) {
         c--;
+        document.getElementsByClassName('img')[c].classList.add('active');
     } else {
         c = (items.length - 1);
+        document.getElementsByClassName('img')[c].classList.add('active');
     }
 
     image.innerHTML = `

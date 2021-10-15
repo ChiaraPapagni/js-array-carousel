@@ -52,7 +52,7 @@
 }
 
 .image-list>li>.active {
-    filter: brightness(100%);
+    filter: brightness(120%);
     border: 2px solid lightgray;
 }
 
