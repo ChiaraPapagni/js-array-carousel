@@ -16,9 +16,30 @@
     margin: auto;
 }
 
+.image {
+    position: relative;
+}
+
 .image img {
     width: 710px;
     height: 400px;
+}
+
+.image h3,
+.image p {
+    position: absolute;
+    color: #FFFFFF;
+    text-align: right;
+}
+
+.image h3 {
+    right: 1.5rem;
+    bottom: 5.3rem;
+}
+
+.image p {
+    right: 1.5rem;
+    bottom: 2rem;
 }
 
 .image-list {

@@ -27,24 +27,48 @@ const text = [
 ]
 
 //seleziono elementi dalla DOM
-const imageList = document.querySelector('.image-list');
 const image = document.querySelector('.image');
+const titleList = document.querySelector('.title-list');
+const textList = document.querySelector('.text-list');
+const imageList = document.querySelector('.image-list');
 const topBtn = document.getElementById('top');
 const downBtn = document.getElementById('down');
+
+let c = 0;
 
 for (let index = 0; index < items.length; index++) {
     //creo nuovo elemento li
     const li = document.createElement('li');
     li.innerHTML = `<img src="${items[index]}">`;
     imageList.append(li);
-
-    image.innerHTML = `<img src="${items[0]}">`;
-
-    downBtn.addEventListener('click', function () {
-        //imageList.className = 'active'; 
-        for (let i = 0; i < items.length; i++) {
-            image.innerHTML = `<img src="${items[i]}">`;
-        }
-    });
-
 }
+
+image.insertAdjacentHTML('beforeend', `<img src="${items[0]}">`);
+titleList.insertAdjacentHTML('beforeend', title[0]);
+textList.insertAdjacentHTML('afterbegin', text[0]);
+
+//textList.innerHTML = text[0];
+
+downBtn.addEventListener('click', function () {
+
+    if (c < (items.length - 1)) {
+        c++;
+    } else {
+        c = 0;
+    }
+
+    image.innerHTML = `<img src="${items[c]}">`;
+
+});
+
+topBtn.addEventListener('click', function () {
+
+    if (c != 0) {
+        c--;
+    } else {
+        c = (items.length - 1);
+    }
+
+    image.innerHTML = `<img src="${items[c]}">`;
+
+});
